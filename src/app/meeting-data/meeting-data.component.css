@@ -1,0 +1,95 @@
+.example-card {
+  max-width: 400px;
+  margin-bottom: 8px; 
+  
+  margin-left: 100px;
+  display: block;
+  margin-top: 100px;
+}
+
+.same-blocks{
+  display: flex;
+}
+mat-card-title{
+  text-align: left;
+}
+mat-card-title{
+  color: rgb(77, 108, 243);
+}
+.buttons{
+ 
+  background-color: rgb(77, 108, 243) ;
+  border-radius: 14px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  /* padding: 10px 15px; */
+  text-align: center;
+  transition: 200ms;
+  width: 20%;
+  box-sizing: border-box;
+  border: 0;
+  font-size: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 1%;
+}
+/* CSS */
+/* .button-32 {
+  background-color: rgb(77, 108, 243) ;
+  border-radius: 12px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px 15px;
+  text-align: center;
+  transition: 200ms;
+  width: 50%;
+  box-sizing: border-box;
+  border: 0;
+  font-size: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.button-32:not(:disabled):hover,
+.button-32:not(:disabled):focus {
+  outline: 0;
+  background: rgb(77, 108, 243) ;
+  box-shadow: 0 0 0 2px rgba(0,0,0,.2), 0 3px 8px 0 rgba(0,0,0,.15);
+}
+
+.button-32:disabled {
+  filter: saturate(0.2) opacity(0.5);
+  cursor: not-allowed;
+}
+.meet-style{
+  font-family: 'Arial', serif;
+  font-size: .8rem;
+}
+.meet-style h5{
+  font-family: 'Arial', serif;
+  font-size: 0.7rem;
+  font:bold
+}
+.meet-style p{
+  font-family: 'Arial', serif;
+  font-size: 0.7rem;
+}
+/* .meet-style{
+  background-color: rgb(225, 232, 235);
+} */
+
+/* .dash {
+
+  font-size: large;
+
+}
+h5{
+  font-weight: bold;
+  font-size: medium;
+}  */

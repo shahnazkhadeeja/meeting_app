@@ -1,0 +1,43 @@
+<!-- <div draggable="true" ngClass="{{dragAreaClass}}">
+	<div class="row">
+		<div class="col-md-12 text-center" style="width: 100%;height: 200px;">
+			Drag files here
+			<a href="javascript:void(0)" (click)="file.click()">
+				or click to open
+			</a>
+			<input type="file"
+                   #file
+                   [multiple]="false"
+                   (change)="onFileChange($event)"
+                   style="display:none" />
+        </div>
+		</div>
+	</div>
+	<div class="error" *ngIf="error">
+		Only one file at time allow
+	</div> -->
+
+	<div class="card">
+		<h5 class="card-header">Drag and Drop</h5>
+		<div class="card-body">
+			<div draggable="true" ngClass="{{dragAreaClass}}">
+				<img  src="assets/cloud.png" >
+				<h5 class="card-title">Drag and drop your files here</h5>
+				<h6>or</h6>
+					<button  class="button-32" href="javascript:void(0)" (click)="file.click()">
+						 click to open
+					</button>
+					<input type="file"
+						   #file
+						   [multiple]="false"
+						   (change)="onFileChange($event)"
+						   style="display:none" />
+				</div>
+				</div>
+			
+			<div class="error" *ngIf="error">
+				Only one file at time allow
+			</div>
+		</div>
+		
+		

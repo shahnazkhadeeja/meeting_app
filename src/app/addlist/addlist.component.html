@@ -1,0 +1,88 @@
+<div class="container">
+    <mat-toolbar class="mb-3 md-tall">
+        <!-- <span class="fill-remaining-space"></span> -->
+        <span>Create a meeting </span>
+        <span class="fill-remaining-space"></span>
+        <span class="filler"></span>
+        <button class="btn btn-text">
+            <mat-icon mat-button mat-dialog-close (click)="onDismiss()">close</mat-icon>
+        </button>
+    </mat-toolbar>
+    <form [formGroup]="new_meeting" class="form-class" (ngSubmit)="createList()">
+        <div class="row">
+            <div class="col">
+                <div id="same_block">
+                    <h6><i class="fas fa-clipboard"></i> &nbsp; Meeting Title</h6>
+                    <mat-icon matTooltip="set meeting title.It is mandatory!">help_outline</mat-icon>
+                </div>
+                <input type="text" formControlName="title" class="form-control" placeholder="Meeting Title">
+
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm">
+                <h6><i class="fas fa-calendar"></i> &nbsp; Date</h6>
+                <input type="date" class="form-control" placeholder="Date" formControlName="date"
+                    style="font-size:.6rem;">
+            </div>
+            <div class="col-sm">
+                <h6><i class="fas fa-bell"></i> &nbsp;Start Time</h6>
+                <input type="time"  class="form-control" placeholder="Time"
+                    formControlName="start_time">
+                    <!-- step='1' min="00:00:00" max="20:00:00" -->
+            </div>
+
+            <div class="col-sm">
+                <h6><i class="fas fa-hourglass"></i> &nbsp;Duration</h6>
+                <input type="text" class="form-control" placeholder="Eg:2 hours" formControlName="duration">
+            </div>
+
+        </div>
+        <br>
+
+        <div class="row">
+            <div class="col">
+                <h6><i class="fas fa-location-arrow"></i> &nbsp;&nbsp;Location</h6>
+                <input type="text" class="form-control" placeholder="Location for meeting" formControlName="location">
+            </div>
+        </div> <br>
+        <div class="row">
+            <div class="col">
+                <div id="same_block">
+                    <h6><i class="fas fa-user-tie"></i> &nbsp;Add Participants</h6>
+                    <mat-icon matTooltip="Maximum 5 participants only">help_outline</mat-icon>
+                </div>
+                <div class="overflow-box">
+                    <ng-select bindLabel="name" placeholder="" appendTo="body" [multiple]="true"
+                        [searchable]="true" [clearable]="true" [maxSelectedItems]=5 (click)="calldata()"formControlName="participant">
+                        <ng-option   *ngFor="let participant of participants" [value]="participant.UID"
+                           >
+                             <img src="/assets/profile-pic.jpg" width="20px" height="20px" /> 
+                            {{participant.emp_name }}
+                        </ng-option>
+                    </ng-select>
+                </div>
+            </div>
+        </div> <br>
+
+        <div class="row">
+            <div class="col">
+                <div id="same_block">
+                    <h6><i class="fas fa-list"></i>&nbsp; Agenda</h6>
+                    <mat-icon matTooltip="set agenda for your meeting to share with team members">help_outline
+                    </mat-icon>
+                </div>
+                <input type="text" class="form-control" placeholder="Agenda for meeting" formControlName="agenda">
+
+            </div>
+
+
+        </div>
+        <br>
+        <button type="button" class="btn btn-success" type="submit">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true">Create</span>
+        </button>&nbsp;&nbsp;
+        <button type="button" class="btn btn-info" (click)="onDismiss()">Cancel</button>
+    </form>
+</div>

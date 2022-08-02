@@ -1,0 +1,32 @@
+<mat-toolbar>
+    <mat-toolbar-row class="justify-content-between">
+        <button mat-icon-button (click)="toggleSidebar()"><mat-icon>menu</mat-icon></button>
+        <div class="row mr-2 ml-auto" id="same_block">
+            <!-- <ul>
+                <li> -->
+                    <div class="col-sm">
+                        <!-- <div class="small fw-light">rounded search input only (with close X)</div> -->
+                        <!-- <div class="input-group">
+                            <input class="form-control border rounded-pill" type="search" value="search" id="example-search-input">
+                        </div> -->
+                    
+                    <button mat-button [matMenuTriggerFor]="menu" class="user mt-2 d-flex align-items-center">
+                      User
+                      <mat-icon class="user-image-icon ml-1">
+                          keyboard_arrow_down
+                      </mat-icon>
+                    </button>
+                    <mat-menu #menu="matMenu">
+                        
+                        <button mat-menu-item>
+                            <mat-icon>exit_to_app</mat-icon>
+                            Logout
+                            </button>
+                    </mat-menu>
+                </div>
+                <!-- </li>
+
+            </ul> -->
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>

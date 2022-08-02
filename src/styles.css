@@ -1,0 +1,269 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@ng-select/ng-select/themes/ant.design.theme.css";
+
+
+/* @import "~@ng-select/ng-select/themes/material.theme.css"; */
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.filler {
+    flex: 1 1 auto;
+}
+
+.close {
+    flex: 1 1 auto;
+}
+
+
+.pr-medium {
+    background-color: rgb(11, 161, 136);
+    border: 3px solid #fff;
+}
+
+.pr-low {
+    background-color:  rgb(184, 173, 23);
+    border: 3px solid #fff;
+}
+
+.pr-high {
+    background-color: rgb(247, 93, 157);
+    border: 3px solid #fff;
+}
+
+.pr-critical {
+    background-color: rgb(245, 79, 79);
+    border: 3px solid #fff;
+}
+
+.pr-selcted {
+    border: 3px solid #333;
+}
+
+.prioritybox {
+    display: block;
+}
+
+.prioritybox span {
+    width: 30px;
+    height: 30px;
+    margin-right: 2px;
+}
+
+.taskform h6 {
+    font-size: 13px !important;
+}
+
+.task-table thead>tr>th {
+    padding: 5 4px !important;
+    font-size: .7rem;
+    font-style: italic;
+    vertical-align: middle;
+    color: white;
+    margin-left: 20px;
+    border: 0 !important;
+    background-color: rgb(77, 108, 243);
+    border-left: 5px solid #f0f0f0;
+    text-align: left;
+}
+
+.task-table tbody>tr>td {
+    padding: 0 10px !important;
+    font-size: .7rem;
+    vertical-align: middle;
+    color: rgb(0, 0, 0);
+    text-align: left;
+}
+
+.task-table tbody>tr>td>button {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+/* .bl-taskstatus {
+    border-left: 20px solid rgb(237, 28, 209)
+} */
+
+.mat-menu-panel span {
+    font-size: .6rem;
+    padding-left: 10px;
+    padding-right: 74px;
+}
+
+.mat-menu-panel button {
+    /* font-size: 15px; */
+    vertical-align: middle !important;
+    padding-left: 20px;
+
+}
+
+.form-class h6 {
+    font-size: .6rem;
+}
+
+.form-class h2 {
+    font-size: medium;
+    padding: 15px 0 14px 20px;
+}
+
+.form-class ::placeholder {
+    font-size: .6rem;
+}
+
+.form-class button {
+    font-size: .6rem;
+}
+
+.form-class mat-icon {
+    font-size: .6rem;
+}
+
+.form-task ::placeholder {
+    font-size: 10px;
+}
+
+.form-task button {
+    font-size: .6rem;
+}
+
+.form-task h6 {
+    font-size: .6rem;
+}
+
+/* .icons{font-size:large;} */
+.meet-form h5 {
+    font-size: 15px;
+}
+
+.meet-form p {
+    font-size: 13px;
+}
+
+.side-style a {
+    font-size: 13px;
+}
+
+.side-style mat-icon {
+    font-size: medium;
+}
+
+
+.example-container {
+    height: calc(100vh);
+}
+
+.example-sidenav {
+    user-select: none;
+}
+
+.full-width {
+    width: 100%;
+    margin-left: 0px;
+}
+
+.menu-button {
+    transition: 300ms ease-in-out;
+    transform: rotate(0deg);
+}
+
+.menu-button.rotated {
+    transform: rotate(180deg);
+}
+
+.submenu {
+    overflow-y: hidden;
+    transition: transform 300ms ease;
+    transform: scaleY(0);
+    transform-origin: top;
+    /* padding-left: 10px; */
+}
+
+.submenu.expanded {
+    transform: scaleY(1);
+    padding-left: 15px;
+}
+
+.menubtn mat-icon {
+    color:whitesmoke !important;
+    margin: 0 3px !important;    
+    font-size:20px !important;
+}
+.mat-drawer-side { border-right:0 !important; }
+.mat-toolbar-row, .mat-toolbar-single-row { height: 50px !important; }
+.menubtn {
+    background-color: transparent;
+    border: 0;
+    box-shadow: 0;
+    color: whitesmoke;
+    font-size: 13px !important;
+    width: 100% !important;
+}
+
+
+.mat-list-base .mat-list-item .mat-list-item-content,
+.mat-list-base .mat-list-option .mat-list-item-content {
+    font-size: 13px !important;
+    color: whitesmoke;
+}
+
+
+/* :host {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+} */
+
+mat-drawer {
+    position: inline-block;
+    min-width: 150px;
+    background: white;
+    border-radius: 0;
+    border: 0 !important;
+}
+
+mat-drawer-container {
+    height: 100%;
+
+}
+
+mat-list-item span {
+    font-size: 15px;
+    color: #fff;
+}
+
+.common-loader-bar h4 {
+    text-align: center;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 4px;
+    top: 50%;
+    left: 50%;
+    z-index: 10001;
+    position: fixed;
+    font-size: 13px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.common-loader-bar:before {
+    content: "";
+    background:rgb(238, 235, 231);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+

@@ -1,0 +1,21 @@
+.same-block{
+    display: flex;
+    
+}
+
+h1{
+    margin-top: 40px;
+    margin-left: 150px;
+}
+
+h5{
+    margin-top: 20px;
+}
+/* .button{
+    
+    margin-top: 100px;
+} */
+
+/* .mat-button.mat-primary .mat-button-focus-overlay {
+    background-color: transparent;
+  } */

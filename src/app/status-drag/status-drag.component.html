@@ -1,0 +1,43 @@
+
+<div cdkDropListGroup class="form-class">
+  <div class="example-container" >
+    <h2 style="background-color: rgb(15, 125, 252);">
+      <mat-icon class="icons">pause_circle_outline</mat-icon>Not Started
+    </h2>
+
+    <div cdkDropList [cdkDropListData]="not_started" class="example-list" id="not_started" [cdkDropListConnectedTo]="['progress','cancelled','complete']"(cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let item of not_started " cdkDrag>{{item.task_title}}</div>
+    </div>
+  </div>
+
+  <div class="example-container">
+    <h2 style="background-color: rgb(9, 230, 182);">
+      <mat-icon>trending_up</mat-icon>In Progress
+    </h2>
+
+    <div cdkDropList [cdkDropListData]="progress" class="example-list"  id="progress" [cdkDropListConnectedTo]="['not_started','cancelled','complete']" (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let item of progress" cdkDrag>{{item.task_title}}</div>
+    </div>
+  </div>
+
+  <div class="example-container">
+    <h2 style="background-color: rgb(212, 112, 243);">
+      <mat-icon>done</mat-icon>Completed
+    </h2>
+
+    <div cdkDropList [cdkDropListData]="completed" class="example-list"  id="completed"  [cdkDropListConnectedTo]="['not_started','progress','cancelled']"(cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let item of completed" cdkDrag>{{item.task_title}}</div>
+    </div>
+  </div>
+
+  <div class="example-container">
+    <h2 style="background-color: rgb(241, 80, 88);">
+      <mat-icon>not_interested</mat-icon>Cancelled
+    </h2>
+
+    <div cdkDropList [cdkDropListData]="cancelled" class="example-list"  id="cancelled" (cdkDropListDropped)="drop($event)"  [cdkDropListConnectedTo]="['progress','not_started','complete']">
+      <div class="example-box" *ngFor="let item of cancelled" cdkDrag>{{item.task_title}}</div>
+    </div>
+  </div>
+
+</div>

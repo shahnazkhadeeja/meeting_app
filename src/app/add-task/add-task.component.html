@@ -1,0 +1,82 @@
+<div class="container taskform">
+    <mat-toolbar class="bg-white p-0 pb-4 px-0">
+
+        <span id="heading-task" style="font-size: medium;">Create a Task</span>
+        <span class="fill-remaining-space"></span>
+        <span class="filler"></span>
+        <mat-icon mat-button (click)="onDismiss()">close</mat-icon>
+    </mat-toolbar><br>
+    <form [formGroup]="new_task" class="form-task" (ngSubmit)="createTask()">
+        <div class="row">
+            <div class="col">
+                <div id="same_block">
+                    <h6><i class="fas fa-list"></i>&nbsp; Task Title</h6>
+                    <mat-icon matTooltip="set task title.It is mandatory!" class="zoomout">help_outline</mat-icon>
+                </div>
+
+                <input matInput type="text" class="form-control" placeholder="Task Title" formControlName="task_title">
+
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <h6><i class="fas fa-user-tie"></i> &nbsp;Assigned To:</h6>
+                <div class="overflow-box">
+                    <ng-select class="ngselect" bindLabel="name" appendTo="body" [multiple]="true" [searchable]="true"
+                        [clearable]="true" (click)="calldata()" formControlName="assigned_to">
+                        <ng-option *ngFor="let participant of participants" [value]="participant.UID" >
+                            <img src="./assets/profile-pic.jpg" width="20px" height="20px" />
+                            {{participant.emp_name}}
+                        </ng-option>
+                    </ng-select>
+                </div>
+            </div>
+        </div> <br>
+        <div class="row">
+            <div class="col">
+                <div id="same_block">
+                    <h6><i class="fas fa-bolt"></i> &nbsp;Priority</h6>
+
+                    <mat-icon matTooltip="set prioritylow,medium,high,critical " class="zoomout">help_outline</mat-icon>
+                </div>
+                <div class="prioritybox">
+                    <span class="pr-low" [class.pr-selcted]="priority=='low'" (click)="setPriority('low')"></span>
+                    <span class="pr-medium" [class.pr-selcted]="priority=='medium'"
+                        (click)="setPriority('medium')"></span>
+                    <span class="pr-high" [class.pr-selcted]="priority=='high'" (click)="setPriority('high')"></span>
+                    <span class="pr-critical" [class.pr-selcted]="priority=='critical'"
+                        (click)="setPriority('critical')"></span>
+                </div>
+
+
+            </div>
+        </div> <br>
+        <div class="row">
+
+            <div class="col-md-4">
+                <h6><i class="fas fa-bell"></i> &nbsp;Start/End Time</h6>
+                <input type="time" step='1' min="00:00:00" max="20:00:00" class="form-control" placeholder="Time"
+                    formControlName="start_time">
+            </div>
+
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <h6><i class="fas fa-list"></i>&nbsp; Description:</h6>
+                <textarea required="required" formControlName="description" class="form-control" rows="6"></textarea>
+            </div>
+
+        </div>
+        <br>
+        <!-- <span>{{this.priority.priority}}</span> <br>  -->
+        <div class="d-flex">
+            <span class="filler"></span>
+            <button type="button" class="btn btn-lg btn-light" (click)="onDismiss()">Cancel</button>
+            <button type="button" class="btn ml-1 btn-lg btn-success" type="submit">
+                Create
+            </button>
+        </div>
+    </form>
+</div>

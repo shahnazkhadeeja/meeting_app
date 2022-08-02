@@ -1,0 +1,12 @@
+<mat-drawer-container autosize style="position: absolute;right: 0px;left: 0px;bottom: 0px;top: 0px;">
+
+    <mat-drawer mode="side" [opened]="sideBarOpen">
+        <app-main-sidenav></app-main-sidenav>
+    </mat-drawer>
+
+    <mat-drawer-content>
+        <app-main-header (toggleSidebarForMe)="sideBarToggler()"></app-main-header>
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+
+</mat-drawer-container>

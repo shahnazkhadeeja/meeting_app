@@ -1,0 +1,50 @@
+<div mat-dialog-container>
+    <div mat-dialog-header>
+        <mat-icon class="close" mat-button mat-dialog-close>close</mat-icon>
+    </div>
+    <div mat-dialog-content #report>
+
+        <div class="row">
+            <div class="col-lg-6 same-block">
+                
+                <h1>Indus Meeting Report</h1>
+              
+            </div>
+                
+        </div>
+        <div class="row">
+            <div class="col-lg-5 ">
+                <div >
+                    <h5>Title: {{this.data.title}}</h5>
+                    <span>Location:{{this.data.location}}</span><br>
+                    <span>Date:{{this.data.date}}</span>
+                    <span>Time:{{this.data.start_time}}</span>
+                    
+                   <h6>Attendence:</h6>
+                   <span>{{attendance}}</span>
+                   <!-- <button (click)="view()">attendance</button> -->
+               
+            </div>
+        </div>
+    </div>
+    <hr>
+        <br>
+        <h4>Agenda:</h4>
+        <P>{{this.data.agenda}}<P>
+
+
+
+
+
+
+
+
+
+    
+</div>
+
+    <div mat-dialog-footer>
+        <button mat-raised-button color="accent" (click)="download()" >Generate Report</button>
+
+    </div>
+</div>

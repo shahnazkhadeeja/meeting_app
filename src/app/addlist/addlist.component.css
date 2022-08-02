@@ -1,0 +1,33 @@
+.container{
+margin: 0px 20px;
+
+}
+/* .fill-remaining-space
+{
+    flex:1 1 auto;
+} */
+/* input, select, textarea{
+    color: #ff0000;
+} */
+textarea:focus, input:focus {
+    color: rgb(59, 7, 143);
+}
+h4:focus{
+    outline: 0;
+}
+.mat-icon {
+    font-size: 10px;
+    color:rgb(10, 1, 9);
+  }
+#same_block {display:flex;}
+
+/* input:focus{
+    outline: 2px solid rgb(7, 0, 5);     
+  }
+.overflow-box{
+    outline: 2px solid rgb(7, 0, 5); 
+} */
+
+h6{
+    font-size: small;
+}

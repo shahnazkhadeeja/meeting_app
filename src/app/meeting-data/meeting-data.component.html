@@ -1,0 +1,102 @@
+<div class="row">
+
+<div class="col-md-4">
+
+  <mat-card class="example-card">
+    <mat-card-title><i class="fa fa-plus" aria-hidden="true"></i></mat-card-title>
+    <mat-card-subtitle><h5>Create Meeting</h5></mat-card-subtitle>
+    <mat-card-content>
+      <p>create your meetings</p>
+      <p></p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button (click)="addList('add',{})" class="buttons">Add</button>
+     
+    </mat-card-actions>
+  </mat-card>
+      
+      </div>
+
+<div class="col-md-4">
+    
+      <mat-card class="example-card">
+        <mat-card-title><i class="fa fa-eye" aria-hidden="true"></i></mat-card-title>
+        <mat-card-subtitle><h5>View Meeting</h5></mat-card-subtitle>
+        <mat-card-content>
+          <p>Meeting lists can view from here</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button [routerLink]="['/main/viewmeeting']" class="buttons" >View</button>
+         
+        </mat-card-actions>
+      </mat-card>
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- <div class="container-fluid page">
+   <div class="meet-style">
+    <div class="d-flex page__box p-3 mt-2 dash">Dashboard</div>
+    <div class="page__content shadow p-3 position-relative">
+      <div class="page__content-data position-absolute"> 
+        <div class="container">
+          <div class="meet-form">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Create New Meeting</h5>
+                <p class="card-text">Your new meetings can add here.</p>
+                <button class="button-32" (click)="addList('add',{})">Add</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Meeting List</h5>
+                <p class="card-text">You can view meeting listings.</p>
+                <button class="button-32" [routerLink]="['/main/viewmeeting']"  >View</button> -->
+                <!-- [queryParams]="{id:11}"
+                 -->
+              <!-- </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+  </div>
+  </div>
+</div>
+  </div>
+
+ -->

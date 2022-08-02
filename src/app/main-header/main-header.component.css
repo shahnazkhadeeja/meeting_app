@@ -1,0 +1,6 @@
+.col-sm{
+    display: flex;
+}
+mat-toolbar{
+    background-color:#fff !important;
+}

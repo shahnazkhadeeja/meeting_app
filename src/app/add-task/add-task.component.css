@@ -1,0 +1,68 @@
+.mat-toolbar {
+    background-color: #eeeef3;
+}
+
+#heading-task {
+    color: light grey;
+}
+
+#same_block {
+    display: flex;
+}
+
+#module {
+    /* width: 500px;
+    font-size: 14px;
+    line-height: 1.5; */
+    display: flex;
+}
+
+#module a.collapsed:after {
+    content: '+ Show More';
+}
+
+#module a:not(.collapsed):after {
+    content: '- Show Less';
+}
+
+#fill-critical {
+    background-color: red;
+}
+
+#fill-high {
+    background-color: orange;
+}
+
+#fill-medium {
+    background-color: yellow;
+}
+
+#fill-low {
+    background-color: green;
+}
+
+span {
+    width: 40px;
+    float: left;
+}
+
+.rating-list li.selected {
+    color: #19e91d;
+}
+
+.zoomout {
+    font-size: .6rem;
+}
+
+.mat-icon {
+    /* font-size: .6rem; */
+    color: gray;
+}
+
+select {
+    font-family: 'FontAwesome', 'Second Font name'
+}
+
+.ng-select {
+    font-size: .2rem;
+}

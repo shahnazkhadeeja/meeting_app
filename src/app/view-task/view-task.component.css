@@ -1,0 +1,68 @@
+h4{
+    color: #5a13bd;
+         font-family: 'Arial',serif; font-size: 20px; 
+        font-weight: normal; line-height: 20px;
+         text-align: center; }
+
+
+        h6 { 
+            
+            color:  #9b0e8d;
+             font-family: 'Source Sans Pro', sans-serif;
+              font-size: 18px; 
+              font-weight: 400; 
+              line-height: 12px; 
+             margin: 1px 0 24px; 
+             vertical-align:calc();
+        }
+span{
+    margin-left: 10px;
+    color:  #610a97;
+    font-size: 14px; 
+              font-weight: 400; 
+              line-height: 18px; 
+              /* margin: 0 0 24px; */
+}
+p {
+     color: #4c4a37;
+     font-family: 'Source Sans Pro', sans-serif;
+      font-size: 13px;
+       line-height: 32px; 
+       margin: 24px 0 24px; 
+    }
+
+   
+    
+    /* CSS */
+    button {
+      background: linear-gradient(to bottom right, #ef47bf, #9e0cc3);
+      border: 0;
+      border-radius: 12px;
+      color: #FFFFFF;
+      cursor: pointer;
+      display: inline-block;
+      font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 2.5;
+      outline: transparent;
+      padding: 0 1rem ;
+      text-align: center;
+      text-decoration: none;
+      transition: box-shadow .2s ease-in-out;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      white-space: nowrap;
+      margin-top: 3rem;
+      margin-left: 15rem;
+    }
+    
+    .button-62:not([disabled]):focus {
+      box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+    }
+    
+    .button-62:not([disabled]):hover {
+      box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+    }
+    #same_block {display:flex;}

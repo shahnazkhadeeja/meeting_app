@@ -1,0 +1,34 @@
+<!-- <ckeditor [editor]="Editor" data="<p>Hello, world!</p>"></ckeditor> -->
+<div class="container">
+<form [formGroup]="agenda_data" (ngSubmit)="createList()" >
+    <div class="row">
+        <div class="col">
+    <input type="text"placeholder="Agenda Title" class="form-control"formControlName="title">
+</div>
+</div>
+<div class="row">
+<div class="col">
+<editor
+outputFormat="text"
+formControlName="content"
+apiKey="test"
+[init]="{
+    height: 500,
+    menubar: false,
+    
+    statusbar:false,
+    plugins: [
+     'link'
+      
+    ],
+    toolbar:
+      'undo redo | formatselect | bold italic backcolor | \
+      alignleft aligncenter alignright alignjustify | \
+      bullist numlist outdent indent | removeformat | help'
+  }"
+></editor>
+</div>
+    </div>
+<button type="submit" class="btn btn-success">ADD</button>
+</form>
+</div>

@@ -1,0 +1,78 @@
+<div class="common-loader-bar" *ngIf="loader">
+  <h4>Processing...</h4>
+</div>
+<div class="container-fluid mt-2">
+  <div class="row">
+    <div class="col-lg-10">
+      <div class="d-flex mb-1">
+        <div>
+          <button class="btn btn-sm" (click)="viewTasks()"> <i class="fa fa-repeat"></i> Reload </button>
+        </div>
+        <span class="filler"></span>
+        <div>
+          <button type="button" class="btn btn-sm btn-primary" (click)="addTask('add',{})" style="font-weight: bold;">+ Add Task</button>
+        </div>
+      </div>
+
+      <table class="table task-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th scope="col" class="title">Title</th>
+            <!-- <th scope="col">Assigned to</th> -->
+            <th scope="col" style="text-align:left;">Status</th>
+            <th scope="col">Priority</th>
+            <th scope="col">Time</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of task_data" >
+
+            <td [ngClass]="{
+          'low' : item.priority=='low',
+          'medium' :  item.priority=='medium',
+          'high' :  item.priority=='high',
+          'critical' :  item.priority=='critical'
+
+       }" style="width:.5rem;" ></td>
+            <td>
+              <div class="py-1 pl-3" (click)="view(this.item)"> {{item.task_title}} </div>
+            </td>
+            <!-- <td >
+             {{i.participants}}
+            </td> -->
+            <td>
+              <button mat-button [matMenuTriggerFor]="menu" class="btn text-capitalize"> {{
+                connect.slugtoTitle(item.status?item.status:'No Started') }} <mat-icon>more_vert</mat-icon></button>
+              <span></span>
+              <mat-menu #menu="matMenu" class="mat-menu-panel">
+                <button mat-menu-item (click)="onclick('not_started',item.id)">
+                  <span>Not Started</span>
+                </button>
+                <button mat-menu-item (click)="onclick('progress',item.id)">
+                  <span>In Progress</span>
+                </button>
+                <button (click)="onclick('completed',item.id)" mat-menu-item>
+                  <span>Completed</span>
+                </button>
+                <button (click)="onclick('cancelled',item.id)" mat-menu-item>
+                  <span>Cancelled</span>
+                </button>
+              </mat-menu>
+            </td>
+            <td class="text-capitalize"> {{item.priority}} </td>
+            <td (click)="view(this.item)"> {{item.time}} </td>
+            <td class="text-center">
+              <button class="btn btn-danger btn-sm" (click)="delete(item.id)">Delete</button>
+              <button class="btn  btn-sm edit-btn" (click)="addTask('edit',item)">Edit</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <mat-paginator [length]="resultsLength"  (page)="pageChangeEvent()" pageSize="10" >
+      </mat-paginator> 
+      
+    </div>
+  </div>
+</div>
